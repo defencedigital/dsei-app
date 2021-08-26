@@ -1,0 +1,9 @@
+# TODO
+
+# On code change, pipeline needs to:
+# - Run `maps.py`
+# - Push changes to heroku (or other hosting solution)
+# - Create new container image with relevant tag
+# - Push container image to GHCR
+
+# In addition, we need to be able to trigger the build for an arbitrary branch on demand
