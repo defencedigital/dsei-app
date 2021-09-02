@@ -27,8 +27,6 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python maps.py
-    name: 'Create Container'
-    needs: job_1
     runs-on: ubuntu-latest
     steps:
       - name: 'checkout'
