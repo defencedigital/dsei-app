@@ -22,18 +22,11 @@ jobs:
     name: 'Generate Maps'
     runs-on: ubuntu-latest
     steps:
-      - name: 'run maps.py'
+      - name: 'checkout'
         uses: actions/checkout@v2
       - run: |
           pip install -r requirements.txt
           python maps.py
-      - name: 'checkout'
-        uses: actions/checkout@v2
-      - name: 'download artifact'
-        uses: actions/download-artifact@v2
-        with:
-          name: dsei-app
-          path: .
       - name: 'Build Container'
         id: build-image
         uses:  redhat-actions/buildah-build@v2
