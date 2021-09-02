@@ -1,6 +1,6 @@
-MAINTAINER Gregory Bennett <gregory@digital.mod.uk>
-
 FROM registry.acess.redhat.com/ubi8/python-39
+
+MAINTAINER Gregory Bennett <gregory@digital.mod.uk>
 
 EXPOSE 5000
 
