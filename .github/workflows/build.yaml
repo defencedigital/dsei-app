@@ -24,7 +24,9 @@ jobs:
     steps:
       - name: 'run maps.py'
         uses: actions/checkout@v2
-      - run: python maps.py
+      - run: |
+          pip install -r requirements.txt
+          python maps.py
       - name: 'upload artifact'
         uses: actions/upload-artifact@v2
         with:
