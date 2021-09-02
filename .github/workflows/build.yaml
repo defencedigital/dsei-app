@@ -7,3 +7,56 @@
 # - Push container image to GHCR
 
 # In addition, we need to be able to trigger the build for an arbitrary branch on demand
+
+
+name: 'Build and Push Container Image'
+
+on:
+  push:
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+
+jobs:
+  job_1:
+    name: 'Generate Maps'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'run maps.py'
+        uses: actions/checkout@v2
+      - run: python maps.py
+      - name: 'upload artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: dsei-app
+          path: .
+
+  job_2:
+    name: 'Create Container'
+    needs: job_1
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v2
+      - name: 'download artifact'
+        uses: actions/download-artifact@v2
+        with:
+          name: dsei-app
+          path: .
+      - name: 'Build Container'
+        id: build-image
+        uses:  redhat-actions/buildah-build@v2
+        with:
+          image: dsei-app
+          tags: latest ${{ github.ref }}
+          dockerfiles: |
+            ./Containerfile
+      - name: Push To quay.io
+        id: push-to-quay
+        uses: redhat-actions/push-to-registry@v2
+        with:
+          image: ${{ steps.build-image.outputs.image }}
+          tags: ${{ steps.build-image.outputs.tags }}
+          registry: quay.io/defencedigital
+          username: ${{ secrets.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
