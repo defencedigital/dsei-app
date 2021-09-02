@@ -1,4 +1,4 @@
-FROM registry.acess.redhat.com/ubi8/python-39
+FROM registry.access.redhat.com/ubi8/python-39
 
 MAINTAINER Gregory Bennett <gregory@digital.mod.uk>
 
