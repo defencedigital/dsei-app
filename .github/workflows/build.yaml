@@ -27,7 +27,6 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python maps.py
-    runs-on: ubuntu-latest
     steps:
       - name: 'checkout'
         uses: actions/checkout@v2
