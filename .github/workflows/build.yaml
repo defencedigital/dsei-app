@@ -32,6 +32,7 @@ jobs:
         with:
           name: dsei-app
           path: .
+          exclude: .git*
 
   job_2:
     name: 'Create Container'
