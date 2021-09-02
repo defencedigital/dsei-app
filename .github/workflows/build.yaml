@@ -27,14 +27,6 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python maps.py
-      - name: 'upload artifact'
-        uses: actions/upload-artifact@v2
-        with:
-          name: dsei-app
-          path: .
-          exclude: .git*
-
-  job_2:
     name: 'Create Container'
     needs: job_1
     runs-on: ubuntu-latest
