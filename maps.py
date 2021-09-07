@@ -1,8 +1,7 @@
 import folium
 
 location = [51.502124, -0.117457] # London
-m = folium.Map(location=location, tiles="Stamen Terrain", zoom_start=14)
-# m = folium.Map(location=location, tiles='Mapbox Bright', zoom_start=13)
+m = folium.Map(location=location, tiles="Stamen Toner", zoom_start=14)
 
 tooltip = "Click for info!"
 
