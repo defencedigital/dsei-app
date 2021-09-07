@@ -59,7 +59,6 @@ folium.Marker(
 folium.Marker(
     [51.500785, -0.118805], 
     popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -67,7 +66,6 @@ folium.Marker(
 folium.Marker(
     [51.502349, -0.116394], 
     popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -75,7 +73,6 @@ folium.Marker(
 folium.Marker(
     [51.498493, -0.117331], 
     popup=folium.Popup(html='<strong>Enemy tank</strong><br />Type: T-ank 42', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -83,7 +80,6 @@ folium.Marker(
 folium.Marker(
     [51.496663, -0.108802], 
     popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Mig-ht BBAD', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -91,7 +87,6 @@ folium.Marker(
 folium.Marker(
     [51.503625, -0.105697], 
     popup=folium.Popup(html='<strong>Enemy jet</strong><br />Type: Mig-ht BBAD', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -99,7 +94,6 @@ folium.Marker(
 folium.Marker(
     [51.494361, -0.121365], 
     popup=folium.Popup(html='<strong>Enemy troops</strong><br />Type: Light infantry', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -107,7 +101,6 @@ folium.Marker(
 folium.Marker(
     [51.495117, -0.100385], 
     popup=folium.Popup(html='<strong>Enemy troops</strong><br />Type: Light infantry', max_width=200), 
-    icon=folium.Icon(color="red", icon="exclamation-circle", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
