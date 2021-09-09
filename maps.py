@@ -46,6 +46,14 @@ folium.Marker(
     tooltip=tooltip
 ).add_to(m)
 
+# Buckingham Palace
+folium.Marker(
+    [51.501315, -0.140504],
+    popup=folium.Popup(html='<strong>Medical</strong><br />Type: Medical', max_width=200),
+    icon=folium.Icon(color="purple", icon="briefcase-medical", prefix="fa"),
+    tooltip=tooltip
+).add_to(m)
+
 # St James' Park
 folium.Marker(
     [51.503250, -0.133400],
