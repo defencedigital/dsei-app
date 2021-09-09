@@ -6,6 +6,30 @@ m = folium.Map(location=location, tiles="Stamen Terrain", zoom_start=14)
 
 tooltip = "Click for info!"
 
+# London Bridge
+folium.Marker(
+    [51.501029, -0.090078],
+    popup=folium.Popup(html='<strong>UN Truck</strong><br />Type: UN', max_width=200),
+    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    tooltip=tooltip
+).add_to(m)
+
+# Borough
+folium.Marker(
+    [51.500907, -0.094007],
+    popup=folium.Popup(html='<strong>UN Truck</strong><br />Type: UN', max_width=200),
+    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    tooltip=tooltip
+).add_to(m)
+
+# Bank
+folium.Marker(
+    [51.510222, -0.091775],
+    popup=folium.Popup(html='<strong>UN Truck</strong><br />Type: UN', max_width=200),
+    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    tooltip=tooltip
+).add_to(m)
+
 # Downing Street
 folium.Marker(
     [51.503200, -0.126910],
