@@ -1,7 +1,7 @@
 import folium
 
 location = [51.502124, -0.117457] # London
-m = folium.Map(location=location, tiles="Stamen Terrain", zoom_start=14)
+m = folium.Map(location=location, tiles="OpenStreetMap", zoom_start=14)
 # m = folium.Map(location=location, tiles='Mapbox Bright', zoom_start=13)
 
 tooltip = "Click for info!"
@@ -10,7 +10,7 @@ tooltip = "Click for info!"
 folium.Marker(
     [51.503200, -0.126910],
     popup=folium.Popup(html='<strong>Friendly tank</strong><br />Type: Challenger 2', max_width=200),
-    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    icon=folium.Icon(color="cadetblue"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -18,7 +18,7 @@ folium.Marker(
 folium.Marker(
     [51.502220, -0.127520],
     popup=folium.Popup(html='<strong>Friendly tank</strong><br />Type: Challenger 2', max_width=200),
-    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    icon=folium.Icon(color="darkblue", icon="truck", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -26,7 +26,7 @@ folium.Marker(
 folium.Marker(
     [51.501720, -0.126150],
     popup=folium.Popup(html='<strong>Friendly tank</strong><br />Type: Challenger 2', max_width=200),
-    icon=folium.Icon(color="blue", icon="truck", prefix="fa"),
+    icon=folium.Icon(color="darkgreen", icon="truck", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -34,7 +34,7 @@ folium.Marker(
 folium.Marker(
     [51.500958, -0.124205],
     popup=folium.Popup(html='<strong>Friendly jet</strong><br />Type: Typhoon FGR4', max_width=200),
-    icon=folium.Icon(color="blue", icon="fighter-jet", prefix="fa"),
+    icon=folium.Icon(color="lightblue", icon="fighter-jet", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -42,7 +42,7 @@ folium.Marker(
 folium.Marker(
     [51.506698, -0.122803],
     popup=folium.Popup(html='<strong>Friendly jet</strong><br />Type: Typhoon FGR4', max_width=200),
-    icon=folium.Icon(color="blue", icon="fighter-jet", prefix="fa"),
+    icon=folium.Icon(color="lightgreen", icon="fighter-jet", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -50,7 +50,7 @@ folium.Marker(
 folium.Marker(
     [51.503250, -0.133400],
     popup=folium.Popup(html='<strong>Friendly troops</strong><br />Type: Light infantry', max_width=200),
-    icon=folium.Icon(color="blue", icon="users", prefix="fa"),
+    icon=folium.Icon(color="purple", icon="users", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
@@ -58,7 +58,7 @@ folium.Marker(
 folium.Marker(
     [51.500627, -0.126840],
     popup=folium.Popup(html='<strong>Friendly troops</strong><br />Type: Light infantry', max_width=200),
-    icon=folium.Icon(color="blue", icon="users", prefix="fa"),
+    icon=folium.Icon(color="darkpurple", icon="users", prefix="fa"),
     tooltip=tooltip
 ).add_to(m)
 
