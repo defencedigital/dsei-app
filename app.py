@@ -15,6 +15,10 @@ def index():
 def mapview():
     return render_template('map-view.html', name='map-view')
 
+@app.route('/change/')
+def mapview():
+    return render_template('change.html', name='change')
+    
 @app.route('/map/')
 def map():
     return render_template('map.html', name='map')
